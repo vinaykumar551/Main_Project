@@ -13,7 +13,7 @@ class params(BaseModel):
     n_neighbors: int = 5
     return_distance: bool = False
 
-
+6
 class PredictionIn(BaseModel):
     nutrition_input: conlist(float, min_items=9, max_items=9)
     ingredients: List[str] = []

@@ -5,7 +5,6 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
 
-
 def scaling(dataframe):
     scaler=StandardScaler()
     prep_data=scaler.fit_transform(dataframe.iloc[:,6:15].to_numpy())

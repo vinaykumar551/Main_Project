@@ -19,3 +19,4 @@ def get_images_links(searchTerm):
         return(imgs_urls[0])
     except:
         return Not_found_link
+    

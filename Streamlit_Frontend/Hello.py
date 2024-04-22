@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image
+
 # Set page config
 st.set_page_config(
     page_title="MAIN PROJECT",
@@ -9,33 +9,46 @@ st.set_page_config(
 )
 
 # Header with image
-# st.image("image2.jpg", use_column_width=True)  # Replace "your_image.png" with the path to your image file
-st.write("## 🌟 Welcome to Diet recommendation system! 🌟")
+st.markdown("<h1 style='text-align: center; color: #FF5733;'>🌟 Welcome to Diet Recommendation System! 🌟</h1>", unsafe_allow_html=True)
 st.write("---")
 
 # Sidebar
-st.sidebar.success("Select a recommendation app ☝️")
+st.sidebar.markdown("<h3 style='text-align: center; color: #FFFFFF; background-color: #212121; padding: 10px;'>Select a Recommendation App ☝️</h3>", unsafe_allow_html=True)
 
 # Main content
-st.write("### About Our Project")
-st.write("Where we have done a diet recommendation web application using a content-based approach with Scikit-Learn, FastAPI, and Streamlit.")
+st.markdown("<h2 style='color: #333333;text-align: center;'>About Our Project</h2>", unsafe_allow_html=True)
+st.markdown("<h5 style='color: #333333;text-align: center;'>Where we have done a diet recommendation web application using a content-based approach with Scikit-Learn, FastAPI, and Streamlit.</h5>", unsafe_allow_html=True)
 st.write("---")
 
-st.image("image.jpg", width=600)
+st.image("image.png", width=600,use_column_width=True)
 
 # Styling with CSS
 st.markdown(
     """
     <style>
-    .st-c7 {
-        color: #FF0000; /* Set color for title (red) */
+    /* Custom CSS for Streamlit components */
+    /* Title */
+    .stApp stContainer {
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .st-b1 {
-        background-color: #000000; /* Set background color for sidebar (black) */
+    
+    /* Sidebar */
+    .sidebar-content {
+        background-color: #212121; /* Set background color for sidebar (dark gray) */
         color: #FFFFFF; /* Set text color for sidebar (white) */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .st-da {
-        color: #000000; /* Set text color for main content (black) */
+    
+    /* Main content */
+    .main {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     </style>
     """,

@@ -43,8 +43,7 @@ class Display:
                         recipe_link=recipe['image_link']
                         recipe_img=f'<div><center><img src={recipe_link} alt={recipe_name}></center></div>'     
                         nutritions_df=pd.DataFrame({value:[recipe[value]] for value in nutrition_values})      
-                        
-                        expander.markdown(recipe_img,unsafe_allow_html=True)  
+                        expander.markdown(recipe_img,unsafe_allow_html=True) 
                         expander.markdown(f'<h5 style="text-align: center;font-family:sans-serif;">Nutritional Values (g):</h5>', unsafe_allow_html=True)                   
                         expander.dataframe(nutritions_df)
                         expander.markdown(f'<h5 style="text-align: center;font-family:sans-serif;">Ingredients:</h5>', unsafe_allow_html=True)
